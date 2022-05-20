@@ -3,9 +3,10 @@ import express from "express";
 const router = express.Router();
 
 //controllers
-import {showMessage, register} from "../controllers/auth"
+import { register } from "../controllers/auth";
+import { showMessage } from "../controllers/showMessage";
 
 router.get("/:message", showMessage);
-router.post('/register', register);
+router.post("/register", register);
 
 module.exports = router;
